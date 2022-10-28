@@ -7,16 +7,21 @@ on:
     branches:
       - main
 jobs:
-  build-and-deploy:
-    runs-on: ubuntu-latest
+  release:
+    name: Release
+    runs-on: ubuntu-18.04
     steps:
-    - name: Checkout
-      uses: actions/checkout@main
-
-    - name: Build and Deploy
-      uses: PingZi818/github-actions-demo@main
-      env:
-        ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
-        BRANCH: gh-pages
-        FOLDER: build
-        BUILD_SCRIPT: npm install && npm run build
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+      - name: Setup Node
+        uses: actions/setup-node@v1
+        with:
+          node-version: 16
+      - name: Install
+        run: yarn
+      - name: Release
+        env: 
+           ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+        run: npx semantic-release
