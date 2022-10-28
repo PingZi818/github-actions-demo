@@ -14,7 +14,7 @@ jobs:
       uses: actions/checkout@main
 
     - name: Build and Deploy
-      uses: PingZi818/github-pages-deploy-action@main
+      uses: PingZi818/github-actions-demo@main
       env:
         ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
         BRANCH: gh-pages
