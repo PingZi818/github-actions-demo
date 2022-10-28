@@ -1,22 +1,44 @@
 # This workflow will run tests using node and then publish a package to GitHub Packages when a release is created
 # For more information see: https://docs.github.com/en/actions/publishing-packages/publishing-nodejs-packages
 
-name: GitHub Actions Build and Deploy Demo
-on:
-  push:
-    branches:
-      - main
-jobs:
-  build-and-deploy:
-    runs-on: ubuntu-latest
-    steps:
-    - name: Checkout
-      uses: actions/checkout@main
+# 工作流名称
+name: Build and Deploy
 
-    - name: Build and Deploy
-      uses: PingZi818/github-pages-deploy-action@main
-      env:
-        ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
-        BRANCH: gh-pages
-        FOLDER: build
-        BUILD_SCRIPT: npm install && npm run build
+on:
+  # 指明要运行的分支，跟上面配置保持一致
+  push:
+    branches: [main]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      # 把分支拉出来
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          persist-credentials: false
+
+      # 指定node版本
+      - name: Set node version
+        uses: actions/setup-node@v2
+        with:
+          node-version: '14'
+
+      # 安装依赖，包括我们的 semantic-release 全套
+      - name: Install
+        run: |
+          npm install
+      
+      # 打包你的插件/组件/库等等等
+      - name: Build
+        run: |
+          npm run build
+
+      # 执行 semantic-release 发布包
+      - name: Release
+        env:
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+          ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+        run: npx semantic-release
