@@ -39,8 +39,17 @@
       "last 1 safari version"
     ]
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PingZi818/github-actions-demo"
+  },
+  "bugs": {
+    "url": "https://github.com/PingZi818/github-actions-demo/issues"
+  },
+  "homepage": "https://github.com/PingZi818/github-actions-demo#README",
   "devDependencies": {
     "@semantic-release/changelog": "^6.0.1",
-    "@semantic-release/git": "^10.0.1"
+    "@semantic-release/git": "^10.0.1",
+    "semantic-release": "^19.0.5"
   }
 }
