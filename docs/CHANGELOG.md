@@ -1,3 +1,10 @@
+# [1.2.0](https://github.com/PingZi818/github-actions-demo/compare/v1.1.0...v1.2.0) (2022-11-30)
+
+
+### Features
+
+* 🎸 BREAKING CHANGE ([b950e29](https://github.com/PingZi818/github-actions-demo/commit/b950e29ae4d72498f339894eca0c2aac12e9d817))
+
 # [1.1.0](https://github.com/PingZi818/github-actions-demo/compare/v1.0.3...v1.1.0) (2022-11-30)
 
 
