@@ -1,3 +1,10 @@
+## [1.0.3](https://github.com/PingZi818/github-actions-demo/compare/v1.0.2...v1.0.3) (2022-11-30)
+
+
+### Bug Fixes
+
+* 🐛 major ([868a88b](https://github.com/PingZi818/github-actions-demo/commit/868a88baebfe1b87b766f9c49a48f9c57cfc7beb))
+
 ## [1.0.2](https://github.com/PingZi818/github-actions-demo/compare/v1.0.1...v1.0.2) (2022-11-30)
 
 
