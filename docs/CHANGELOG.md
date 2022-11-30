@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/PingZi818/github-actions-demo/compare/v1.0.3...v1.1.0) (2022-11-30)
+
+
+### Features
+
+* minor 1 ([c19ae43](https://github.com/PingZi818/github-actions-demo/commit/c19ae4371cddb994839c8dbb5aaade738a237920))
+
 ## [1.0.3](https://github.com/PingZi818/github-actions-demo/compare/v1.0.2...v1.0.3) (2022-11-30)
 
 
