@@ -1,3 +1,10 @@
+## [1.0.1](https://github.com/PingZi818/github-actions-demo/compare/v1.0.0...v1.0.1) (2022-11-30)
+
+
+### Bug Fixes
+
+* patch version ([1bf816d](https://github.com/PingZi818/github-actions-demo/commit/1bf816d7328e2eeaf0c427fe2cd0cba5673add53))
+
 # 1.0.0 (2022-11-30)
 
 
